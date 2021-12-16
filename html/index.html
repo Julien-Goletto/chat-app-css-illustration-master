@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <title>Chat App Illustration</title>
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -15,9 +15,13 @@
     <header class="mobile__header">
       <div class="header__notch"></div>
       <div class="header__container">
-        <span class="header__user-name">Samuel Green</span>
-        <span class="header_status">Available to Walk</span>
-      </div>
+        <img src="../images/arrow_back_ios_white_24dp.svg" alt="back" class="header__back">
+        <img src="../images/avatar.jpg" alt="profile picture" class="header__profile-pic">
+        <div class="header__text-infos">
+          <span class="header__user-name">Samuel Green</span>
+          <span class="header_status">Available to Walk</span>
+        </div>
+        <img src="../images/more_vert_white_24dp.svg" class="header__more"></img>
     </header>
     <div class="mobile__talk">
       <span class="talk__messages talk__messages--user">
@@ -26,10 +30,10 @@
       <span class="talk__messages talk__messages--user">
         Could you send over some pictures of your dog, please?
       </span>
-      <div class="talk__messages talk__messages--photos">
-        <div class="photos__photo"></div>
-        <div class="photos__photo"></div>
-        <div class="photos__photo"></div>
+      <div class="talk__photos talk__photos--replies">
+        <img src="../images/dog-image-1.jpg" alt="photo" class="photo"></img>
+        <img src="../images/dog-image-2.jpg" alt="photo" class="photo"></img>
+        <img src="../images/dog-image-3.jpg" alt="photo" class="photo"></img>
       </div>
       <span class="talk__messages talk__messages--replies">
         Here are a few pictures. She’s a happy girl!
@@ -40,15 +44,20 @@
       <span class="talk__messages talk__messages--user">
         She looks so happy! The time we discussed works. How long shall I take her out for?
       </span>
-      <span class="talk__proposition">
-        30 minute walk
+      <div class="talk__messages talk__messages--user talk__messages--proposition">
+        <img src="../images/radio_button_unchecked_white_24dp.svg" alt="radio button" class="proposition__radio">
+        <span class="proposition__duration">30 minute walk</span>
         <span class="proposition__fee">$29</span>
-      </span>
-      <span class="talk__proposition">
-        1 hour walk
+      </div>
+      <div class="talk__messages talk__messages--user talk__messages--proposition">
+        <img src="../images/radio_button_unchecked_white_24dp.svg" alt="radio button" class="proposition__radio">
+        <span class="proposition__duration">1 hour walk</span>
         <span class="proposition__fee">$49</span>
-      </span>
-      <span class="talk__type">Type a message…</span>
+      </div>
+      <div class="talk__type">
+        <span class="type__placeholder">Type a message…</span>
+        <div class="type__send"></div>
+      </div>
     </div>
   </section>
   <section class="presentation">
