@@ -1,14 +1,285 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
 
+body{
+    background : hsl(270, 20%, 96%);
+}
+
 main{
     font-family: 'Rubik', sans-serif;
+    font-size : 1rem;
+    position : relative;
+    display : flex;
+    flex-direction: column;
 }
 
 .background{
-    width : 60%;
-    height: 50vh;
-    border-radius: 0 0 90% 0;
+    width : 80%;
+    height: 65vh;
+    border-radius: 0 0 65% 65%;
     background : linear-gradient(hsl(293, 100%, 63%),hsl(264, 100%, 61%));
-    margin-left : -10%;
+    position : absolute;
+    left : -40%;
+    top : -12%;
+    z-index : -1;
 }
 
+.mobile{
+    /*Dimensions et forme*/
+    background-color: white;
+    border-radius : 1.5em;
+    width : 60%;
+    max-width: 350px;
+
+    /*Espacements*/
+    margin : 3em auto 0;
+    padding : 0.5em;
+
+    /*Agencement*/
+    display: flex;
+    flex-direction: column;
+}
+
+/*Header*/
+
+.mobile__header{
+    background : linear-gradient(to left, hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+    border-radius: 1em 1em .25em .25em;
+    display : flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding : 0 0.75em .875em;
+}
+
+.header__notch{
+    background-color: white;
+    height : 1em;
+    width : 50%;
+    margin : -0.125em auto 0.5em;
+    border-radius: 0 0 .75em .75em;
+}
+
+.header__container{
+    color : white;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size : 0.8em;
+}
+
+.header__back{
+    height: 1em;
+    width: 1em;
+    margin-right : .375em;
+}
+
+.header__profile-pic{
+    height : 2em;
+    width : 2em;
+    border : solid .2em rgba(255, 255, 255, 80%);
+    border-radius : 2em;
+    margin-right : .375em;
+}
+
+.header__text-infos{
+    display : flex;
+    flex-direction: column;
+}
+.header__user-name{
+    margin : .125em;
+}
+
+.header_status{
+    font-weight : 400;
+    color : hsl(276, 100%, 81%);
+    font-size: .7em;
+}
+
+.header__more{
+    fill : white;
+    margin : 0 0 0 auto;
+    height : 1em;
+    width : 1em;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Chat*/
+
+.mobile__talk{
+    height : 100%;
+    background : hsl(270, 20%, 96%);
+    padding : .125em .25em;
+    display : flex;
+    flex-direction: column;
+    border-radius: 0 0 1em 1em;
+}
+
+.talk__messages{
+    background-color : hsl(271, 76%, 92%);
+    color: hsl(276, 46%, 61%);
+    max-width : 55%;
+    font-size : .4em;
+    line-height: 1.3;
+    font-weight: 400;
+    padding : .75em;
+    border-radius: 1em 1em 1em .5em;
+    margin : .5em;
+}
+
+.talk__messages--replies{
+    background-color: white;
+    color: hsl(271, 15%, 43%);
+    align-self: flex-end;
+    border-radius: 1em 1em .5em 1em ;
+}
+
+.talk__photos{
+    display : flex;
+    margin: .5em 0;
+    max-width : 65%;
+    justify-content: flex-start;
+}
+
+.talk__photos--replies{
+    margin-left: auto;
+    justify-content: flex-end;
+}
+
+.photo{
+    height : 2em;
+    width : auto;
+    border-radius: .4em;
+    margin-right: .25em;
+}
+
+.talk__messages--proposition{
+    display : flex;
+    align-content:center;
+    max-width : 65%;
+    padding : 1em;
+    background : linear-gradient(to right, hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+    color : white;
+}
+
+.proposition__radio{
+    height : 2em;
+    width : auto;
+    margin-right: .75em;;
+}
+
+.proposition__duration{
+    font-size: 1em;
+    padding : .5em 0;
+}
+
+.proposition__fee{
+    font-weight: 700;
+    font-size : 1.5em;
+    padding : 0.1em;
+    margin-left: auto;
+}
+
+.talk__type{
+    margin : .5em .25em;
+    padding : .1em .2em;
+    height: 2em;
+    background-color: white;
+    border-radius: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.type__placeholder{
+    font-size : .6em;
+    height : 1em;
+    color : hsl(206, 6%, 79%);
+    margin-left: 1.5em;
+}
+
+.type__send{
+    content:"";
+    height : 1.2em;
+    width: 1.2em;
+    background : right /70% no-repeat url("../images/arrow_back_ios_white_24dp.svg"),hsl(271, 36%, 24%);
+    transform : rotate(.5turn);
+    border-radius: 1.2em;
+    margin-right: .125em;
+}
+
+/*Description*/
+
+.presentation{
+    margin: 2em 0 4em;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.presentation__title{
+    color : hsl(271, 36%, 24%);
+    font-weight: 500;
+    font-size: 2em;
+    margin-bottom: .75em;
+}
+
+.presentation__p{
+    color  :hsl(270, 7%, 64%);
+    padding : 0 2em 0;
+    text-align: center;
+    font-size : 1em;
+    line-height: 1.4;
+}
+
+@media screen and (min-width : 430px){
+    main{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /*Retouche du background*/
+    .background{
+        width : 35%;
+        height: 90vh;
+        left : -10%;
+    }
+
+    .additionnal-background{
+        width : 35%;
+        height: 90vh;
+        right : -10%;
+        bottom : -15%;
+        border-radius: 65% 65% 0 0 ;
+        background : hsl(271, 76%, 92%);
+        position : absolute;
+        z-index : -1;
+    }
+
+    .mobile{
+        /*On redimensionne le mobile*/
+        width : 13em;
+
+        /*Espacements*/
+        margin : 10% 3em 10% 20%;
+        /* 257 * 405 */
+    }
+
+    /*Retouche de la description*/
+    .presentation{
+        margin: 2em 0 4em;
+        display : flex;
+        width : 25em;
+        align-items: flex-start;
+    }
+
+    .presentation__title{
+        text-align: left;
+    }
+    
+    .presentation__p{
+        text-align: left;
+        padding :0;
+    }
+}
