@@ -37,6 +37,9 @@ main{
     /*Agencement*/
     display: flex;
     flex-direction: column;
+
+    /*Ajout de l'ombrage*/
+    box-shadow: .5em 1em 1em hsla(271, 76%, 92%);
 }
 
 /*Header*/
